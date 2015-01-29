@@ -8,9 +8,10 @@
 
 #import "RPLWordsTableViewController.h"
 #import "RPLWordsModel.h"
+#import "RPLDefinitionViewController.h"
 
 @interface RPLWordsTableViewController ()
-
+@property(strong,nonatomic)RPLDefinitionViewController* definitionViewController;
 @end
 
 @implementation RPLWordsTableViewController
@@ -19,7 +20,12 @@
     [super viewDidLoad];
     //Cargar modelo
     self.wordsModel=[[RPLWordsModel alloc]init];
-
+    //localizamos el view controller que queremos
+    self.definitionViewController=(RPLDefinitionViewController*)[[self.splitViewController.viewControllers lastObject]topViewController];
+    self.delegate=self.definitionViewController;
+    //forzamos que cuando cargue el progrma coja la primera programa
+    NSString *word=[self.wordsModel wordAtIndex:0 inLetterAtIndex:0];
+    [self.delegate wordsTableViewController:self didClickOnWord:word];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,18 +41,27 @@
     return [[self.wordsModel letters]count];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
     return [[self.wordsModel wordsAtIndex:section]count];
 }
 
+//Cabecera de la seccion
+-(NSString*)tableView:(UITableView *)tableView
+titleForHeaderInSection:(NSInteger)section{
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //Devuelveme las secciones que haya en el fichero que tiene mi modelo
+    return [[self.wordsModel letters]objectAtIndex:section];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier=@"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    if (cell!=nil) {
+    if (cell==nil) {
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault
                                    reuseIdentifier:CellIdentifier];
     }
@@ -57,6 +72,18 @@
     return cell;
 }
 
+
+#pragma mark - Table delegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+
+
+    NSString* selectWord=[self.wordsModel wordAtIndex:indexPath.row inLetterAtIndex:indexPath.section];
+    
+    //Delegado, te mando palabra y secccion, me ando a mi mismo y te mando la palabra extraida.
+    [self.delegate wordsTableViewController:self
+                             didClickOnWord:selectWord];
+}
 
 /*
 // Override to support conditional editing of the table view.

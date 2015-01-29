@@ -22,6 +22,7 @@
         UISplitViewController *splitViewController=(UISplitViewController*)self.window.rootViewController;
         UINavigationController *navigationViewController=[splitViewController.viewControllers lastObject];
         splitViewController.delegate=(id)navigationViewController.topViewController;
+        
     }
     
     

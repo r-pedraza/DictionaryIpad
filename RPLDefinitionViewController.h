@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface RPLDefinitionViewController : UIViewController
+#import "RPLWordsTableViewController.h"
+@interface RPLDefinitionViewController : UIViewController <wordsTableViewControllerdelegate>
+@property (weak, nonatomic) IBOutlet UILabel *myWordLabel;
+@property(copy,nonatomic)NSString* myWord;
 
 @end
