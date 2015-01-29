@@ -17,6 +17,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    if ([[UIDevice currentDevice]userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        //no creamremos un nuevo split, simplememnte cremaos uno apuntando a uno existente
+        UISplitViewController *splitViewController=(UISplitViewController*)self.window.rootViewController;
+        UINavigationController *navigationViewController=[splitViewController.viewControllers lastObject];
+        splitViewController.delegate=(id)navigationViewController.topViewController;
+    }
+    
+    
     return YES;
 }
 

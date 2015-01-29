@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RPLDefinitionViewController.h
 //  DictionaryIpad
 //
 //  Created by Raul Pedraza on 29/1/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface RPLDefinitionViewController : UIViewController
 
 @end
-

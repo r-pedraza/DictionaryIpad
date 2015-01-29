@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		576A475E1A7A397D00403076 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 576A475D1A7A397D00403076 /* main.m */; };
 		576A47611A7A397D00403076 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 576A47601A7A397D00403076 /* AppDelegate.m */; };
-		576A47641A7A397D00403076 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 576A47631A7A397D00403076 /* ViewController.m */; };
 		576A47671A7A397D00403076 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576A47651A7A397D00403076 /* Main.storyboard */; };
 		576A47691A7A397D00403076 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 576A47681A7A397D00403076 /* Images.xcassets */; };
 		576A476C1A7A397D00403076 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 576A476A1A7A397D00403076 /* LaunchScreen.xib */; };
 		576A47781A7A397D00403076 /* DictionaryIpadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 576A47771A7A397D00403076 /* DictionaryIpadTests.m */; };
+		576A47831A7A3B5E00403076 /* RPLWordsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 576A47821A7A3B5E00403076 /* RPLWordsTableViewController.m */; };
+		576A47871A7A3B8D00403076 /* RPLDefinitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 576A47861A7A3B8D00403076 /* RPLDefinitionViewController.m */; };
+		576A47891A7A3BD500403076 /* Vocabwords.txt in Resources */ = {isa = PBXBuildFile; fileRef = 576A47881A7A3BD500403076 /* Vocabwords.txt */; };
+		576A478C1A7A3C8C00403076 /* RPLWordsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 576A478B1A7A3C8C00403076 /* RPLWordsModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +35,19 @@
 		576A475D1A7A397D00403076 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		576A475F1A7A397D00403076 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		576A47601A7A397D00403076 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		576A47621A7A397D00403076 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		576A47631A7A397D00403076 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		576A47661A7A397D00403076 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		576A47681A7A397D00403076 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		576A476B1A7A397D00403076 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		576A47711A7A397D00403076 /* DictionaryIpadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DictionaryIpadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		576A47761A7A397D00403076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		576A47771A7A397D00403076 /* DictionaryIpadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictionaryIpadTests.m; sourceTree = "<group>"; };
+		576A47811A7A3B5E00403076 /* RPLWordsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPLWordsTableViewController.h; sourceTree = "<group>"; };
+		576A47821A7A3B5E00403076 /* RPLWordsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPLWordsTableViewController.m; sourceTree = "<group>"; };
+		576A47851A7A3B8D00403076 /* RPLDefinitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPLDefinitionViewController.h; sourceTree = "<group>"; };
+		576A47861A7A3B8D00403076 /* RPLDefinitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPLDefinitionViewController.m; sourceTree = "<group>"; };
+		576A47881A7A3BD500403076 /* Vocabwords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Vocabwords.txt; sourceTree = "<group>"; };
+		576A478A1A7A3C8C00403076 /* RPLWordsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPLWordsModel.h; sourceTree = "<group>"; };
+		576A478B1A7A3C8C00403076 /* RPLWordsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPLWordsModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,8 @@
 		576A474F1A7A397D00403076 = {
 			isa = PBXGroup;
 			children = (
+				576A47881A7A3BD500403076 /* Vocabwords.txt */,
+				576A47841A7A3B6100403076 /* Controllers */,
 				576A475A1A7A397D00403076 /* DictionaryIpad */,
 				576A47741A7A397D00403076 /* DictionaryIpadTests */,
 				576A47591A7A397D00403076 /* Products */,
@@ -83,9 +93,8 @@
 			children = (
 				576A475F1A7A397D00403076 /* AppDelegate.h */,
 				576A47601A7A397D00403076 /* AppDelegate.m */,
-				576A47621A7A397D00403076 /* ViewController.h */,
-				576A47631A7A397D00403076 /* ViewController.m */,
 				576A47651A7A397D00403076 /* Main.storyboard */,
+				576A478D1A7A3C9000403076 /* Models */,
 				576A47681A7A397D00403076 /* Images.xcassets */,
 				576A476A1A7A397D00403076 /* LaunchScreen.xib */,
 				576A475B1A7A397D00403076 /* Supporting Files */,
@@ -117,6 +126,26 @@
 				576A47761A7A397D00403076 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		576A47841A7A3B6100403076 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				576A47811A7A3B5E00403076 /* RPLWordsTableViewController.h */,
+				576A47821A7A3B5E00403076 /* RPLWordsTableViewController.m */,
+				576A47851A7A3B8D00403076 /* RPLDefinitionViewController.h */,
+				576A47861A7A3B8D00403076 /* RPLDefinitionViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		576A478D1A7A3C9000403076 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				576A478A1A7A3C8C00403076 /* RPLWordsModel.h */,
+				576A478B1A7A3C8C00403076 /* RPLWordsModel.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +230,7 @@
 			files = (
 				576A47671A7A397D00403076 /* Main.storyboard in Resources */,
 				576A476C1A7A397D00403076 /* LaunchScreen.xib in Resources */,
+				576A47891A7A3BD500403076 /* Vocabwords.txt in Resources */,
 				576A47691A7A397D00403076 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,9 +249,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				576A47641A7A397D00403076 /* ViewController.m in Sources */,
 				576A47611A7A397D00403076 /* AppDelegate.m in Sources */,
 				576A475E1A7A397D00403076 /* main.m in Sources */,
+				576A47871A7A3B8D00403076 /* RPLDefinitionViewController.m in Sources */,
+				576A47831A7A3B5E00403076 /* RPLWordsTableViewController.m in Sources */,
+				576A478C1A7A3C8C00403076 /* RPLWordsModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
